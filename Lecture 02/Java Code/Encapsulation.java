@@ -1,17 +1,17 @@
 
 /*
-Encapsulation says 2 things:
-1. An Object's Characteristics and its behaviour are encapsulated together
-within that Object.
-2. All the characteristics or behaviours are not for everyone to access.
-Object should provide data security.
+    Encapsulation says 2 things:
+    1. An Object's Characteristics and its behaviour are encapsulated together
+    within that Object.
+    2. All the characteristics or behaviours are not for everyone to access.
+    Object should provide data security.
 
-We follow above 2 pointers about Object of real world in programming by:
-1. Creating a class that act as a blueprint for Object creation. Class contain
-all the characteristics (class variable) and behaviour (class methods) in one block,
-encapsulating it together.
-2. We introduce access modifiers (public, private, protected, default) etc to provide data
-security to the class members.
+    We follow above 2 pointers about Object of real world in programming by:
+    1. Creating a class that act as a blueprint for Object creation. Class contain
+    all the characteristics (class variable) and behaviour (class methods) in one block,
+    encapsulating it together.
+    2. We introduce access modifiers (public, private, protected, default) etc to provide data
+    security to the class members.
 */
 class SportsCar {
     private String brand;
@@ -19,7 +19,7 @@ class SportsCar {
     private boolean isEngineOn = false;
     private int currentSpeed = 0;
     private int currentGear = 0;
-        
+
     //Introduce new variable to exaplain setters
     private String tyreCompany;
 
@@ -58,10 +58,11 @@ class SportsCar {
         currentSpeed += 20;
         System.out.println(brand + " " + model + " : Accelerating to " + currentSpeed + " km/h");
     }
-    
+
     public void brake() {
         currentSpeed -= 20;
-        if (currentSpeed < 0) currentSpeed = 0;
+        if (currentSpeed < 0)
+            currentSpeed = 0;
         System.out.println(brand + " " + model + " : Braking! Speed is now " + currentSpeed + " km/h");
     }
 
@@ -90,8 +91,8 @@ public class Encapsulation {
         //Setting arbitrary value to speed.
         //mySportsCar.currentSpeed = 500;
 
-       // System.out.println("Current Speed of My Sports Car is set to " + mySportsCar.currentSpeed);
+        // System.out.println("Current Speed of My Sports Car is set to " + mySportsCar.currentSpeed);
 
-       System.out.println("Current Speed of My Sports Car is " + mySportsCar.getSpeed());
+        System.out.println("Current Speed of My Sports Car is " + mySportsCar.getSpeed());
     }
-} 
+}

@@ -1,19 +1,19 @@
 
 /*
-We know that real world Objects show inheritance relationship where we
-have parent object and child object. child object have all the characters
-or behaviours that parent have plus some additional characters/behaviours.
-Like all cars in real world have a brand, model etc and can start, stop, 
-accelerate etc. But some specific cars like manual car have gear System
-while other specific cars like Electric cars have battery system.
+    We know that real world Objects show inheritance relationship where we
+    have parent object and child object. child object have all the characters
+    or behaviours that parent have plus some additional characters/behaviours.
+    Like all cars in real world have a brand, model etc and can start, stop,
+    accelerate etc. But some specific cars like manual car have gear System
+    while other specific cars like Electric cars have battery system.
 
-We represent this scenario of real world in programming by creating a parent class and
-defining all the characters(variables) or behaviours(methods) that all cars 
-have in parent class. Then we create different child classes that inherits 
-from this parent class and define only those characters and behaviours
-that are specific to them. Although objects of these child classes can 
-access or call parent class characters(variables) and behaviours(methods).
-Hence providing code reusability.
+    We represent this scenario of real world in programming by creating a parent class and
+    defining all the characters(variables) or behaviours(methods) that all cars
+    have in parent class. Then we create different child classes that inherits
+    from this parent class and define only those characters and behaviours
+    that are specific to them. Although objects of these child classes can
+    access or call parent class characters(variables) and behaviours(methods).
+    Hence providing code reusability.
 */
 class Car {
     protected String brand;
@@ -51,14 +51,15 @@ class Car {
 
     public void brake() {
         currentSpeed -= 20;
-        if (currentSpeed < 0) currentSpeed = 0;
+        if (currentSpeed < 0)
+            currentSpeed = 0;
         System.out.println(brand + " " + model + " : Braking! Speed is now " + currentSpeed + " km/h");
     }
 }
 
 class ManualCar extends Car {  // Inherits from Car
-    
-    private int currentGear; //spcific to Manual Car.
+
+    private int currentGear; //specific to Manual Car.
 
     public ManualCar(String brand, String model) {
         super(brand, model);
@@ -74,7 +75,7 @@ class ManualCar extends Car {  // Inherits from Car
 
 
 class ElectricCar extends Car {  // Inherits from Car
-    
+
     private int batteryLevel; //spcific to Electric Car.
 
     public ElectricCar(String brand, String model) {

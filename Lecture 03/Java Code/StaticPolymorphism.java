@@ -1,9 +1,9 @@
 /*
-Static Polymorphism (Compile-time polymorphism) in real life says that
-the same action can behave differently depending on the input parameters.
-For example, a Manual car can accelerate by a fixed amount or by a
-specific amount you request. In programming, we achieve this via method
-overloading: multiple methods with the same name but different signatures.
+    Static Polymorphism (Compile-time polymorphism) in real life says that
+    the same action can behave differently depending on the input parameters.
+    For example, a Manual car can accelerate by a fixed amount or by a
+    specific amount you request. In programming, we achieve this via method
+    overloading: multiple methods with the same name but different signatures.
 */
 
 class ManualCar {
@@ -53,9 +53,8 @@ class ManualCar {
 
     public void brake() {
         currentSpeed -= 20;
-        if (currentSpeed < 0) {
+        if (currentSpeed < 0)
             currentSpeed = 0;
-        }
         System.out.println(brand + " " + model + " : Braking! Speed is now "
                            + currentSpeed + " km/h");
     }
@@ -70,8 +69,8 @@ public class StaticPolymorphism {
     public static void main(String[] args) {
         ManualCar myManualCar = new ManualCar("Suzuki", "WagonR");
         myManualCar.startEngine();
-        myManualCar.accelerate();      
-        myManualCar.accelerate(40);    
+        myManualCar.accelerate();
+        myManualCar.accelerate(40);
         myManualCar.brake();
         myManualCar.stopEngine();
     }
